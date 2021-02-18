@@ -1,0 +1,487 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/icon.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Encryption - IT50</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Mukta",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="/stylesheets/features.css">
+    
+      <link rel="stylesheet" href="/stylesheets/dimensions.css">
+    
+      <link rel="stylesheet" href="/stylesheets/colors.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="it50" data-md-color-primary="" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#encryption" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="IT50" class="md-header-nav__button md-logo" aria-label="IT50">
+      
+  <img src="../../assets/icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            IT50
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Encryption
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../" class="md-tabs__link">
+      About
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Introduction/" class="md-tabs__link">
+        Book
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IT50" class="md-nav__button md-logo" aria-label="IT50">
+      
+  <img src="../../assets/icon.svg" alt="logo">
+
+    </a>
+    IT50
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Book
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Book" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Book
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data/" class="md-nav__link">
+        Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Text%20Encoding/" class="md-nav__link">
+        Text Encoding
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#symmetric-encryption" class="md-nav__link">
+    Symmetric encryption
+  </a>
+  
+    <nav class="md-nav" aria-label="Symmetric encryption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-workflow" class="md-nav__link">
+    Typical workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asymmetric-encryption" class="md-nav__link">
+    Asymmetric encryption
+  </a>
+  
+    <nav class="md-nav" aria-label="Asymmetric encryption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ideal-workflow" class="md-nav__link">
+    Ideal workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-with-in-time-key-sharing-and-mitm-attack" class="md-nav__link">
+    Workflow with in-time key sharing and MITM attack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insecurities" class="md-nav__link">
+    Insecurities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-cipher" class="md-nav__link">
+    Block cipher
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="encryption">Encryption</h1>
+<p>We want to keep secrets. Rather than keeping all the data in our heads or guarding a physical copy, we can encrypt that data so it exists in some other form that is not meaningful to anyone who cannot decrypt.</p>
+<p>In this chapter, we are mainly going to talk about the two types of encryption: <strong>symmetric encryption</strong> and <strong>asymmetric encryption</strong>. We will deal with original data, encrypted data, and <strong>keys</strong>. The key is the parameter used to transform the data. Ideally, encrypted data should look like random data, and data encrypted with different (even similar) keys should be in no way similar to each other. Such encryption algorithms have been designed by scientists. But still, they fall into the two categories.</p>
+<h2 id="symmetric-encryption">Symmetric encryption</h2>
+<p>Symmetric encryption has one key. This key is used to encrypt and decrypt the data.</p>
+<p>Symmetric encryption is suitable for storage and internal networks where keys are pre-shared. If a key is shared unencrypted with the encrypted data, the encryption can <em>always</em> be compromised by the connection bearer.</p>
+<h3 id="typical-workflow">Typical workflow</h3>
+<ul>
+<li>Alice and Bob knows the key.</li>
+<li>Alice has the original data.</li>
+<li>Alice encrypts the original data with the key.</li>
+<li>Alice sends the encrypted data to Bob.</li>
+<li>Bob decrypts the data with the key.</li>
+<li>Bob has the original data.</li>
+</ul>
+<h2 id="asymmetric-encryption">Asymmetric encryption</h2>
+<p>Asymmetric encryption has a pair of keys. When one of the keys is used to encrypt data, only the other key can be used to decrypt. Keep in mind that the sender knows the original data.</p>
+<p>Usually, one key is made public and the other is kept private. This design allows secure communication.</p>
+<p>Asymmetrical encryption is mathematically similar to signing. They were actually born at the same time.</p>
+<h3 id="ideal-workflow">Ideal workflow</h3>
+<ul>
+<li>Everyone knows everyone's public key.</li>
+<li>Alice has the original data.</li>
+<li>Alice encrypts the original data with Bob's public key.</li>
+<li>Alice sends the encrypted data to Bob.</li>
+<li>Bob decrypts the data with his private key.</li>
+<li>Bob has the original data.</li>
+</ul>
+<p>Note that Alice does not encrypt with her own private key, or anyone who has access to the encrypted data would be able decrypt it.</p>
+<p>However, in the real world we can't possibly know everyone's public key. The key has to be shared at the start of the connection. In this situation, the connection bearer can always perform a <strong>man-in-the-middle (MITM)</strong> attack. The next section shows how such attack works. The world currently has a widely used (and <em>pretty</em> solid) way to prevent MITM attacks, and we will talk about that in the Signing and CA chapter.</p>
+<h3 id="workflow-with-in-time-key-sharing-and-mitm-attack">Workflow with in-time key sharing and MITM attack</h3>
+<ul>
+<li>Alice has the original data.</li>
+<li>Alice requests Bob for his public key and this request ended up in Charles' hand.</li>
+<li>Charles requests Bob for his public key. Bob responds with his public key.</li>
+<li>Charles responds Alice with his own public key.</li>
+<li>Alice encrypts the original data with Charles's public key.</li>
+<li>Alice sends the encrypted data to Bob and it ended up in Charles' hand.</li>
+<li>Charles decrypts the data with his private key.</li>
+<li>Charles has the original data.</li>
+<li>Charles optionally modifies the original data.</li>
+<li>Charles encrypts the original data with Bob's public key.</li>
+<li>Bob decrypts the data with his private key.</li>
+<li>Bob has the original data.</li>
+</ul>
+<h2 id="insecurities">Insecurities</h2>
+<p>A brute force attack means to keep attempting decryption with different keys until the correct one is found. To prevent this to the maximum extent, use a key as random as possible. Even though most programs use a hash of your password as the key, keep in mind that attackers can try popular passwords and word combinations, so follow the typical advice when setting your password.</p>
+<p>An encryption algorithm is considered cracked if there is any way to decrypt data faster (computationally less expensive) than using brute force. However, these can be done in differet levels and some speeds up the attempts more than others. If the data can be</p>
+<h2 id="block-cipher">Block cipher</h2>
+<p>Mathematics require that the key be larger (longer) than the data for the encryption to function. (BOTH SY AND ASY?) Therefore, people come up with different ways to split up data while keeping the system secure.</p>
+<p>Here is a list of common block ciphers:</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigaion.instant', 'navigation.tabs', 'navigation.indexes'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
