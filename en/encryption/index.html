@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
-        <title>True control comes after knowledge. - IT50</title>
+        <title>Encryption - IT50</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#true-control-comes-after-knowledge" class="md-skip">
+        <a href="#encryption" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              True control comes after knowledge.
+              Encryption
             
           </span>
         </div>
@@ -173,7 +173,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link">
+    <a href="../" class="md-tabs__link">
       About
     </a>
   </li>
@@ -188,7 +188,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="introduction/" class="md-tabs__link">
+      <a href="../introduction/" class="md-tabs__link">
         Book
       </a>
     </li>
@@ -205,9 +205,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -236,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         About
       </a>
     </li>
@@ -272,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -284,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data/" class="md-nav__link">
+      <a href="../data/" class="md-nav__link">
         Data
       </a>
     </li>
@@ -296,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="text-encoding/" class="md-nav__link">
+      <a href="../text-encoding/" class="md-nav__link">
         Text Encoding
       </a>
     </li>
@@ -317,9 +315,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -328,6 +324,75 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#symmetric-encryption" class="md-nav__link">
+    Symmetric encryption
+  </a>
+  
+    <nav class="md-nav" aria-label="Symmetric encryption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-workflow" class="md-nav__link">
+    Typical workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asymmetric-encryption" class="md-nav__link">
+    Asymmetric encryption
+  </a>
+  
+    <nav class="md-nav" aria-label="Asymmetric encryption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ideal-workflow" class="md-nav__link">
+    Ideal workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-with-in-time-key-sharing-and-mitm-attack" class="md-nav__link">
+    Workflow with in-time key sharing and MITM attack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insecurities" class="md-nav__link">
+    Insecurities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-cipher" class="md-nav__link">
+    Block cipher
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -340,11 +405,56 @@
               
                 
                 
-                <h1 id="true-control-comes-after-knowledge">True control comes after knowledge.</h1>
-<p>This book introduces our everyday computer systems from the perspective of a professional software user rather than a service user. You will be learning the fundamentals that a professional software user needs and then have greater control over the software you use.</p>
-<p><a class="md-button" href="/en/introduction">Read the Book</a></p>
-                
-                  
+                <h1 id="encryption">Encryption</h1>
+<p>We want to keep secrets. Rather than keeping all the data in our heads or guarding a physical copy, we can encrypt that data so it exists in some other form that is not meaningful to anyone who cannot decrypt.</p>
+<p>In this chapter, we are mainly going to talk about the two types of encryption: <strong>symmetric encryption</strong> and <strong>asymmetric encryption</strong>. We will deal with original data, encrypted data, and <strong>keys</strong>. The key is the parameter used to transform the data. Ideally, encrypted data should look like random data, and data encrypted with different (even similar) keys should be in no way similar to each other. Such encryption algorithms have been designed by scientists. But still, they fall into the two categories.</p>
+<h2 id="symmetric-encryption">Symmetric encryption</h2>
+<p>Symmetric encryption has one key. This key is used to encrypt and decrypt the data.</p>
+<p>Symmetric encryption is suitable for storage and internal networks where keys are pre-shared. If a key is shared unencrypted with the encrypted data, the encryption can <em>always</em> be compromised by the connection bearer.</p>
+<h3 id="typical-workflow">Typical workflow</h3>
+<ul>
+<li>Alice and Bob knows the key.</li>
+<li>Alice has the original data.</li>
+<li>Alice encrypts the original data with the key.</li>
+<li>Alice sends the encrypted data to Bob.</li>
+<li>Bob decrypts the data with the key.</li>
+<li>Bob has the original data.</li>
+</ul>
+<h2 id="asymmetric-encryption">Asymmetric encryption</h2>
+<p>Asymmetric encryption has a pair of keys. When one of the keys is used to encrypt data, only the other key can be used to decrypt. Keep in mind that the sender knows the original data.</p>
+<p>Usually, one key is made public and the other is kept private. This design allows secure communication.</p>
+<h3 id="ideal-workflow">Ideal workflow</h3>
+<ul>
+<li>Everyone knows everyone’s public key.</li>
+<li>Alice has the original data.</li>
+<li>Alice encrypts the original data with Bob’s public key.</li>
+<li>Alice sends the encrypted data to Bob.</li>
+<li>Bob decrypts the data with his private key.</li>
+<li>Bob has the original data.</li>
+</ul>
+<p>Note that Alice does not encrypt with her own private key, or anyone who has access to the encrypted data would be able decrypt it.</p>
+<p>However, in the real world it is not practical to know everyone’s public key. The key has to be shared at the start of the connection. In this situation, the connection bearer can always perform a <strong>man-in-the-middle (MITM)</strong> attack. The next section shows how such attack works. The world currently has a widely used (and <em>pretty</em> solid) way to prevent MITM attacks, and we will talk about that in the Signing and CA chapter.</p>
+<h3 id="workflow-with-in-time-key-sharing-and-mitm-attack">Workflow with in-time key sharing and MITM attack</h3>
+<ul>
+<li>Alice has the original data.</li>
+<li>Alice requests Bob for his public key and this request ended up in Charles’ hand.</li>
+<li>Charles requests Bob for his public key. Bob responds with his public key.</li>
+<li>Charles responds Alice with his own public key.</li>
+<li>Alice encrypts the original data with Charles’s public key.</li>
+<li>Alice sends the encrypted data to Bob and it ended up in Charles’ hand.</li>
+<li>Charles decrypts the data with his private key.</li>
+<li>Charles has the original data.</li>
+<li>Charles optionally modifies the original data.</li>
+<li>Charles encrypts the original data with Bob’s public key.</li>
+<li>Bob decrypts the data with his private key.</li>
+<li>Bob has the original data.</li>
+</ul>
+<h2 id="insecurities">Insecurities</h2>
+<p>A brute force attack means to keep attempting decryption with different keys until the correct one is found. To prevent this to the maximum extent, use a key as random as possible. Even though most programs use a cryptographic hash of your password as the key, keep in mind that attackers can try popular passwords and word combinations, so follow the typical advice when setting your password.</p>
+<p>An encryption algorithm is considered cracked if there is any way to decrypt data faster (computationally less expensive) than using brute force. However, these can be done in differet levels and some speeds up the attempts more than others. If the data can be</p>
+<h2 id="block-cipher">Block cipher</h2>
+<p>Mathematics require that the key be larger (longer) than the data for the encryption to function. (BOTH SY AND ASY?) Therefore, people come up with different ways to split up data while keeping the system secure.</p>
+<p>Here is a list of common block ciphers:</p>
                 
               
               
@@ -379,10 +489,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigaion.instant", "navigation.tabs", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigaion.instant", "navigation.tabs", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
     
   </body>
