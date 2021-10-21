@@ -769,7 +769,7 @@
                 
                 
                 <h1 id="public-key-infrastructure">Public Key Infrastructure</h1>
-<p>As you read through the Asymmetric Cryptography chapter, you may have noticed that such a system alone cannot guarantee the authenticity of the public key, <em>i.e.</em> no way to trust that a particular public key belongs to a particular entity, other than manual record. The world currently has a <strong>public key infrastructure</strong> (<strong>PKI</strong>) for authentic public key distribution.</p>
+<p>As you read through the Asymmetric Cryptography chapter, you may have noticed that such a system alone cannot guarantee the authenticity of the public key, <em>i.e.</em> no way to trust that a particular public key belongs to a particular entity, other than manual record. The world currently has a <strong>public key infrastructure</strong> (<strong>PKI</strong>) to protect the authenticity of public keys shared over an insecure channel.</p>
 <h2 id="entity">Entity</h2>
 <p>We do not trust a public key by itself; we trust the fact that it is owned by a particular person, because keys cannot be used interchangably between people you communicate with. That “particular person” is generalized into the concept of entity, which can be a person, an organization, a website, <em>etc.</em></p>
 <p>Different entity types have different kinds of suitable information fields. The Common Name field is a generic choice, but there are also many others in the <strong>X.509</strong> standard. It is possible to have only the minimal necessary information. For example, for a website, it is considered OK to only have the domain name in the Common Name field.</p>
