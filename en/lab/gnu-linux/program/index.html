@@ -994,14 +994,14 @@ gcc -O3 add.c -o add-O3
 </code></pre></div>
 <p>You don’t have to understand this piece of code.</p>
 <p>The first column is the linear address in the file. The hexadecimal data in the second column is the data at that address. The special thing about these data is that they are instructions directly executable by the x86-64 CPU. The last column shows what those hexadecimals stand for, in human-readable <strong>assembly language</strong>, in this case specific to the author’s CPU architecture.</p>
-<p>We can see a single <code>add</code> instruction with two operands. That instruction indeed does the addition for us, although the result is unused.</p>
+<p>We can see a single <code>add</code> instruction with two operands. That instruction indeed does the addition for us, although the result is unused. Note that no variable name is preserved in the compiled program.</p>
 <h2 id="optimization">Optimization</h2>
 <p>The compiler we used, GCC, has optimization functionality. The second version we produced, <code>add-O3</code>, is the optimized version. After running <code>objdump -D add-O3 &gt; add-O3.dump.txt</code>, we have a look look at its <code>main</code> function:</p>
 <div class="highlight"><pre><span></span><code>0000000000401020 &lt;main&gt;:
   401020:       31 c0                   xor    %eax,%eax
   401022:       c3                      ret
 </code></pre></div>
-<p>This one is much shorter. In fact, the only things it does is returning 0. This is because GCC found out we left the values unused and decided to not include them, so the program can run faster. You now have a basic sense of what optimization does.</p>
+<p>This one is much shorter. In fact, the only things it does is returning 0. This is because GCC found out we left the values unused and decided to not include them, so the program can run faster. This is only one of the many optimization techniques. Generally, optimizations make the code much faster to run, but much harder to read.</p>
 <h2 id="interpreted-program">Interpreted program</h2>
 <p>Python is an easy-to-learn interpreted programming language. Because it is interpreted, it has an interactive shell that lets you type in one line of code at a time and run it as appropriate. Start <code>python3</code>, then issue <code>a = 3</code>, <code>b = 5</code>, <code>s = a + b</code>, and <code>print(s)</code>. This will not save anything to a file. Use <code>exit()</code> to exit.</p>
                 
