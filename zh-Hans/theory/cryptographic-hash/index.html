@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>IT50</title>
+        <title>密码学哈希 - IT50</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -53,12 +53,17 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              密码学哈希
             
           </span>
         </div>
@@ -609,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/none" class="md-nav__link">
+      <a href="../../../none" class="md-nav__link">
         概览
       </a>
     </li>
@@ -637,11 +642,119 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    哈希函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    密码学哈希函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    不安全因素
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                <h1 id="_1">密码学哈希</h1>
+<h2 id="_2">哈希函数</h2>
+<p>一个<strong>哈希函数</strong>（hash function）是一个函数，它接收任何长度的数据并输出一个固定长度的数据，称为其<strong>哈希</strong>（hash）。</p>
+<p>哈希函数是确定性的。相同的输入数据将总是产生相同的哈希值。哈希函数对于单个输入能快速计算。</p>
+<table>
+<thead>
+<tr>
+<th>数据（十六进制）</th>
+<th>文本 （UTF-8）</th>
+<th>SHA-2 256 哈希</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>（空数据）</td>
+<td>（空数据）</td>
+<td><code>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></td>
+</tr>
+<tr>
+<td><code>48656c6c6f20776f726c64</code></td>
+<td><code>Hello world</code></td>
+<td><code>64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">密码学哈希函数</h2>
+<p>一个<strong>密码学哈希函数</strong>也是：</p>
+<ul>
+<li>不可逆的。哈希函数只能接收一段数据并输出其哈希值。即使说它们是可逆的，这一操作也是很不可行的：逆转哈希函数的唯一方法是尝试输入。同样，要找到两个具有相同哈希值的不同数据也是不可行的。</li>
+<li>混乱的。从数据到哈希值的映射应该看起来是随机的。两块相似的数据会产生看似不相关的哈希值。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据（十六进制）</th>
+<th>SHA-2 256 哈希</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>089f8954a605c945</code></td>
+<td><code>e7ad94f8f1338ce71c0b033d881abafd978cb332a56f1fe2d79082565aafc5ee</code></td>
+</tr>
+<tr>
+<td><code>089f8954a605c946</code></td>
+<td><code>581c858eba8d0c8a9e418f35193ca72536f91f55a7610b7001d0c0330bc8b1b6</code></td>
+</tr>
+</tbody>
+</table>
+<p>当我们需要确保两块数据是相同的，而不需要比较其中任何有意义的细节时，哈希就很有用。当涉及到数据验证时，系统经常比较哈希值，而不是数据本身。</p>
+<p>目前，最常用的安全加密哈希函数是 SHA-2 和 SHA-3 系列。</p>
+<h2 id="_4">不安全因素</h2>
+<p>当我们使用密码学哈希来保护东西时，我们依靠的是它们的不可逆转性。因为理想的加密哈希函数是不可逆的，所以最低效的攻击方式是使用暴力，简单地一个一个尝试输入。找到相同哈希值的几率非常低，通常需要非常长的时间才能找到相同的哈希值。</p>
+<p>算法中的一个聪明的发现可能使攻击比暴力更快。当这种攻击被发现时，这种哈希函数应该被淘汰。</p>
+                
+              
+              
+                
+
 
               
             </article>
@@ -674,10 +787,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigaion.instant", "navigation.tabs", "navigation.indexes"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigaion.instant", "navigation.tabs", "navigation.indexes"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
