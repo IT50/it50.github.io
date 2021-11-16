@@ -14,7 +14,7 @@
     
     
       
-        <title>Program - IT50</title>
+        <title>Cryptographic Hash - IT50</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#program" class="md-skip">
+        <a href="#cryptographic-hash" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Program
+              Cryptographic Hash
             
           </span>
         </div>
@@ -208,15 +208,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../" class="md-tabs__link">
         Lab
       </a>
     </li>
@@ -665,14 +663,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -714,14 +710,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
       
       
@@ -759,81 +753,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Program
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
         Program
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-fast-is-ram" class="md-nav__link">
-    How fast is RAM?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compiling-a-simple-program" class="md-nav__link">
-    Compiling a simple program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-a-binary-program-looks-like" class="md-nav__link">
-    What a binary program looks like
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optimization" class="md-nav__link">
-    Optimization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interpreted-program" class="md-nav__link">
-    Interpreted program
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -908,36 +832,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-fast-is-ram" class="md-nav__link">
-    How fast is RAM?
+  <a href="#computing-hashes" class="md-nav__link">
+    Computing hashes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#compiling-a-simple-program" class="md-nav__link">
-    Compiling a simple program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-a-binary-program-looks-like" class="md-nav__link">
-    What a binary program looks like
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optimization" class="md-nav__link">
-    Optimization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interpreted-program" class="md-nav__link">
-    Interpreted program
+  <a href="#revisiting-the-shattered-collision-attack" class="md-nav__link">
+    Revisiting the SHAttered collision attack
   </a>
   
 </li>
@@ -955,57 +858,35 @@
               
                 
                 
-                <h1 id="program">Program</h1>
-<h2 id="how-fast-is-ram">How fast is RAM?</h2>
-<p>There are plenty of system benchmark tools available. Use one of your choice to benchmark your hard drive and RAM, and compare their sequential and random read/write speeds.</p>
-<p>RAM should be extraordinarily faster than your hard drive when it comes to random operations. Random operations are very common in running programs, so RAM is chosen to be the storage for them.</p>
-<h2 id="compiling-a-simple-program">Compiling a simple program</h2>
-<p>Here is the source code of a very simple C program that adds the integers 3 and 5 together. It does not even give back the result in any way.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+                <h1 id="cryptographic-hash">Cryptographic Hash</h1>
+<h2 id="computing-hashes">Computing hashes</h2>
+<p>We use the <code>sha256sum</code> utility to compute the SHA-2 256 hash of a given input.</p>
+<p>To hash the text you then type into the terminal, use <code>sha256sum</code>. The text is encoded with your terminal’s text encoding and then sent to <code>sha256sum</code>. To finish the input, issue ++ctrl+D++. Note that the inclusion of a newline character (produced by <span class="keys"><kbd class="key-enter">Enter</kbd></span>) will make the input different.</p>
+<p>To hash a file, use <code>sha256sum file_name</code>.</p>
+<h2 id="revisiting-the-shattered-collision-attack">Revisiting the <a href="https://shattered.io">SHAttered</a> collision attack</h2>
+<p>A collision attack is where one tries to produce a different piece of data that has the same hash as a given piece of data.</p>
+<p>Researchers have already broken SHA-1. A way to construct a collision attack much faster than brute force was used in the <a href="https://shattered.io">SHAttered</a> project. We are going to use the two files provided on the website to further explore the concept of cryptographic hash.</p>
+<p>Use these commands to download the attack results:</p>
+<div class="highlight"><pre><span></span><code>wget https://shattered.io/static/shattered-1.pdf
+wget https://shattered.io/static/shattered-2.pdf
 </code></pre></div>
-<p>Type the code into <code>add.c</code> and save the file.</p>
-<p>Then, use the following commands to let <code>gcc</code> compile the code into two executable binary versions. The first one has optimization disabled while the second one has optimization level set to 3. The outputs are saved to <code>add-O0</code> and <code>add-O3</code> respectively.</p>
-<div class="highlight"><pre><span></span><code>gcc -O0 add.c -o add-O0
-gcc -O3 add.c -o add-O3
+<p>Then use these commands to compute the SHA-1 hashes of the two files:</p>
+<div class="highlight"><pre><span></span><code>sha1sum shattered-1.pdf
+sha1sum shattered-2.pdf
 </code></pre></div>
-<p>In case you wonder, <code>gcc</code> and its dependencies are in machine code. Because a computer can only understand its own machine language, anything that is not will ultimately be processed by some code in its own machine language.</p>
-<p>You can now run these two programs with <code>./add-O0</code> and <code>./add-O3</code>. It does not print anything to the terminal.</p>
-<h2 id="what-a-binary-program-looks-like">What a binary program looks like</h2>
-<p>Use the following <code>objdump</code> command to disassemble the <code>add-O0</code> binary executable and save the output to <code>add-O0.dump.txt</code>.</p>
-<div class="highlight"><pre><span></span><code>objdump -D add-O0 &gt; add-O0.dump.txt
+<p>The outputs should be:</p>
+<div class="highlight"><pre><span></span><code>$ sha1sum shattered-1.pdf
+38762cf7f55934b34d179ae6a4c80cadccbb7f0a  shattered-1.pdf
+$ sha1sum shattered-2.pdf
+38762cf7f55934b34d179ae6a4c80cadccbb7f0a  shattered-2.pdf
 </code></pre></div>
-<p>Then, open the dump. On the author’s system (x86-64, Linux), the executable is in ELF format. The machine code and assembly code of the <code>main</code> function we just wrote is provided below.</p>
-<div class="highlight"><pre><span></span><code>0000000000401106 &lt;main&gt;:
-  401106:       55                      push   %rbp
-  401107:       48 89 e5                mov    %rsp,%rbp
-  40110a:       c7 45 fc 00 00 00 00    movl   $0x3,-0x4(%rbp)
-  401111:       c7 45 f8 04 00 00 00    movl   $0x5,-0x8(%rbp)
-  401118:       8b 55 fc                mov    -0x4(%rbp),%edx
-  40111b:       8b 45 f8                mov    -0x8(%rbp),%eax
-  40111e:       01 d0                   add    %edx,%eax
-  401120:       89 45 f4                mov    %eax,-0xc(%rbp)
-  401123:       b8 00 00 00 00          mov    $0x0,%eax
-  401128:       5d                      pop    %rbp
-  401129:       c3                      ret
+<p>Now, imagine that you trust the SHA-1 hash value <code>38762cf7f55934b34d179ae6a4c80cadccbb7f0a</code>. You then receive <code>shattered-2.pdf</code>, compute its SHA-1 hash, and subsequently trust <code>shattered-2.pdf</code>, assuming no one is able to construct a different piece of data that hashes to the same value. Were you the victim of a collision attack? We further verify that the content of the two files are different, using the SHA-2 256 hash algorithm:</p>
+<div class="highlight"><pre><span></span><code>$ sha256sum shattered-1.pdf
+2bb787a73e37352f92383abe7e2902936d1059ad9f1ba6daaa9c1e58ee6970d0  shattered-1.pdf
+$ sha256sum shattered-2.pdf
+d4488775d29bdef7993367d541064dbdda50d383f89f0aa13a6ff2e0894ba5ff  shattered-2.pdf
 </code></pre></div>
-<p>You don’t have to understand this piece of code.</p>
-<p>The first column is the linear address in the file. The hexadecimal data in the second column is the data at that address. The special thing about these data is that they are instructions directly executable by the x86-64 CPU. The last column shows what those hexadecimals stand for, in human-readable <strong>assembly language</strong>, in this case specific to the author’s CPU architecture.</p>
-<p>We can see a single <code>add</code> instruction with two operands. That instruction indeed does the addition for us, although the result is unused. Note that no variable name is preserved in the compiled program.</p>
-<h2 id="optimization">Optimization</h2>
-<p>The compiler we used, GCC, has optimization functionality. The second version we produced, <code>add-O3</code>, is the optimized version. After running <code>objdump -D add-O3 &gt; add-O3.dump.txt</code>, we have a look look at its <code>main</code> function:</p>
-<div class="highlight"><pre><span></span><code>0000000000401020 &lt;main&gt;:
-  401020:       31 c0                   xor    %eax,%eax
-  401022:       c3                      ret
-</code></pre></div>
-<p>This one is much shorter. In fact, the only things it does is returning 0. This is because GCC found out we left the values unused and decided to not include them, so the program can run faster. This is only one of the many optimization techniques. Generally, optimizations make the code much faster to run, but much harder to read.</p>
-<h2 id="interpreted-program">Interpreted program</h2>
-<p>Python is an easy-to-learn interpreted programming language. Because it is interpreted, it has an interactive shell that lets you type in one line of code at a time and run it as appropriate. Start <code>python3</code>, then issue <code>a = 3</code>, <code>b = 5</code>, <code>s = a + b</code>, and <code>print(s)</code>. This will not save anything to a file. Use <code>exit()</code> to exit.</p>
-<p>Again, these lines are ultimately processed by some machine code, in this case <code>python3</code> and its dependencies.</p>
+<p>That is the proof of a successful SHA-1 collision attack. Note that this was not obtained using plain brute force; an intelligent finding in the algorithm produced a method much faster than that, but still not instant.</p>
                 
               
               
@@ -1021,26 +902,6 @@ gcc -O3 add.c -o add-O3
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab for GNU/Linux" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Lab for GNU/Linux
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
