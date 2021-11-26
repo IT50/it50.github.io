@@ -677,32 +677,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#internet" class="md-nav__link">
-    Internet
+  <a href="#the-osi-model" class="md-nav__link">
+    The OSI Model
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protocol" class="md-nav__link">
-    Protocol
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#packet" class="md-nav__link">
-    Packet
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#osi-model" class="md-nav__link">
-    OSI Model
-  </a>
-  
-    <nav class="md-nav" aria-label="OSI Model">
+    <nav class="md-nav" aria-label="The OSI Model">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -965,32 +944,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#internet" class="md-nav__link">
-    Internet
+  <a href="#the-osi-model" class="md-nav__link">
+    The OSI Model
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protocol" class="md-nav__link">
-    Protocol
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#packet" class="md-nav__link">
-    Packet
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#osi-model" class="md-nav__link">
-    OSI Model
-  </a>
-  
-    <nav class="md-nav" aria-label="OSI Model">
+    <nav class="md-nav" aria-label="The OSI Model">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1054,25 +1012,18 @@
                 
                 
                 <h1 id="network">Network</h1>
-<p>Networks, like data, are built on the concept of abstraction. There are many abstract layers in a network, and this enables professionals to focus on their own layer and not to worry about things happen in other layers.</p>
-<p>Since the layers are completely abstract, there can be many possible layer architectures. However, in real life, people expect distinct devices can communicate with each other through the networks. Then here comes the standard. </p>
-<p>But before diving into the layer stuff, you will need to learn some basic terminology.</p>
-<h2 id="internet">Internet</h2>
-<p>We are not giving a definition but giving a description here.</p>
-<p>Internet is a giant "web" connected by physical links and nodes. Links are often some kinds of cables. Nodes can be your computers, your WiFi routers, or servers of your ISP (Internet Service Provider, for example, AT&amp;T).</p>
-<p>Nodes send and receive data transferred by links, and most of the time, the data travel through many nodes then eventually arrive at the destination node. </p>
-<h2 id="protocol">Protocol</h2>
-<p>Protocols are like guidelines about how to communicate. </p>
-<p>How to send the data? How to receive the data? How to read the data? And how to recover corrupted data? </p>
-<p>Protocols are here to solve these questions.</p>
-<p>We can't just send a bunch of 0s and 1s to another computer as we want. Distinct devices will need some common protocols to transfer data properly and reliably.</p>
-<h2 id="packet">Packet</h2>
-<p>When transferring data from a source node to a destination node, people need a structured and easy-understanding way to interact with the data, which are de facto streams of 0s and 1s in the lowest physical level.</p>
-<p>Therefore, each layer will store data into many small chunks, and this chuck of data is called "packet". Each layer has different <em>protocols</em> to interact with the packets.</p>
-<p>Instead of using the same term "packet" in all layers, some academic textbooks will use different terms for the "packet" in different layers to make it more clear. In IT50, for simplicity, we will just use "packet" throughout all layers.</p>
-<h2 id="osi-model">OSI Model</h2>
-<p>Some people from <a href="https://en.wikipedia.org/wiki/International_Organization_for_Standardization">ISO</a> developed a generally accepted standard layer architecture, which is called <a href="https://en.wikipedia.org/wiki/OSI_model#Layer_6:_Presentation_Layer">OSI model</a>.</p>
-<p>There are 7 layers in total, listed in the table below.</p>
+<p>Networks, like data, are built on the concept of abstraction. There are many abstract layers in a network. In one layer we only care about communicating the two devices directly connected to each other, while in another layer we have all the machines on the network directly accessible. This layer structure allows for universal compatibility with various technologies, because a technology only belongs to one of the layers.</p>
+<p>Before diving into those, here are some concepts that apply to multiple layers.</p>
+<ul>
+<li>
+<p><em>Protocol.</em> <strong>Protocols</strong> are guidelines of communication in a layer. They specify rules about sending, receiving, and interpreting data.</p>
+</li>
+<li>
+<p><em>Packet.</em> When transferring continuous data, it is constructed into many small chunks called <strong>packets</strong>, each with some kind of identification. Two senses of the packet concept exist in diffeent layers. In the transport layer, packets are of a transport layer protocol, and these packets get delivered all across the network. In the data link layer, packets are of a data link protocol communicating two devices.</p>
+</li>
+</ul>
+<h2 id="the-osi-model">The OSI Model</h2>
+<p><a href="https://en.wikipedia.org/wiki/International_Organization_for_Standardization">ISO</a> has developed a generally accepted standard layer architecture called the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a>. There are 7 layers in total.</p>
 <table>
 <thead>
 <tr>
@@ -1082,56 +1033,53 @@
 </thead>
 <tbody>
 <tr>
-<td>7th Layer</td>
+<td>7</td>
 <td>Application</td>
 </tr>
 <tr>
-<td>6th Layer</td>
+<td>6</td>
 <td>Presentation</td>
 </tr>
 <tr>
-<td>5th Layer</td>
+<td>5</td>
 <td>Session</td>
 </tr>
 <tr>
-<td>4th Layer</td>
+<td>4</td>
 <td>Transport</td>
 </tr>
 <tr>
-<td>3rd Layer</td>
+<td>3</td>
 <td>Network</td>
 </tr>
 <tr>
-<td>2nd Layer</td>
+<td>2</td>
 <td>Data Link</td>
 </tr>
 <tr>
-<td>Base Layer</td>
+<td>1</td>
 <td>Physical</td>
 </tr>
 </tbody>
 </table>
-<p>But don’t worry, average users will only need to know 2~3 layers. That’s the reason for building such an abstract layer structure!</p>
-<p>In this overview page, all layers will be briefly introduced from top to bottom, and some layers will be elaborated in separated pages.</p>
+<p>But don’t worry about the number of layers here. As a professional user, you only need to learn about three of them: layers 2, 3 and 4. Above these layers, things mostly depend on the implementation of the software, unrelated to the universal knowledge of computer networks. Down below, layer 1 is just hardware.</p>
+<p>Below, all layers are briefly introduced from top to bottom, and important layers will be elaborated in separated chapters.</p>
 <h3 id="application-layer">Application Layer</h3>
-<p>This is the superficial layer with which most software interacts. It has many useful protocols which we are using every day, like HTTP, FTP, and DNS. When sending packets, those packets will be passed down to a lower layer.</p>
+<p>This is the layer where useful software interact compatibly. It has the protocols we use every day, such as HTTP, FTP, and DNS.</p>
 <h3 id="presentation-layer-session-layer">Presentation Layer &amp; Session Layer</h3>
-<p>In reality, the implementation of these two layer have already been merged into the application layer. Thus, we don't need to care much about these two layers.</p>
+<p>In these two layers, continuous and complete data of the above protocols are constructed from the small packets in the transport layer.</p>
+<p>In many practices, these two layers are merged into the application layer.</p>
 <h3 id="transport-layer">Transport Layer</h3>
-<p>There are two main protocols in this layer, one is TCP and another is UDP. They have different usage scenarios, and we will elaborate them in separate pages.</p>
-<p>The packets from the upper application layer are reconstructed into TCP packets or UDP packets in this layer.</p>
+<p>There are two main protocols in this layer: <strong>TCP</strong> and <strong>UDP</strong>, all over IP. They have different usage scenarios, and we will elaborate them in separate chapters.</p>
+<p>The continuous data from the layers above are constructed into smaller packets in this layer, so they can be individually exchanged, with only the necessary packets resent if some get corrupted or lost.</p>
 <h3 id="network-layer">Network Layer</h3>
-<p>The main protocol in this layer is IP protocol. You may have heard of "IP address", and that "IP" is what we are talking about here.</p>
-<p>TCP and UDP packets are reconstructed into IP packets in this layer and sent to destination node.</p>
-<p>As we mentioned before, the data will travel many different nodes and links before arriving at the destination node, so there is a need to determine the path. We can't just let our data get lost in the Internet, right?</p>
-<p>Therefore, beside the IP protocol, there are many other protocols which are designed to navigate the IP packets in this layer.</p>
+<p>The universal protocol in this layer is the <strong>Internet Protocol</strong> (<strong>IP</strong>). You may have heard of an “IP address”, and that “IP” is what we are talking about here.</p>
+<p>This layer is where a computer network looks like a network (graph) where computers are <strong>nodes</strong> (vertices) and connections are <strong>edges</strong>. A packet will travel many different nodes and edges before arriving at the destination node, and it is up to the network layer to determine the path.</p>
 <h3 id="data-link-layer">Data Link Layer</h3>
-<p>This layer deals with the nodes that are physically connected together. </p>
-<p>Two common protocols in this layer are Ethernet and WiFi.</p>
-<p>We don't need to know details of this layer, since it's close to the lowest physical layer. We only need to know how to use it, and that's enough.</p>
+<p>This layer deals with two nodes that are physically connected together. Two well-known protocols in this layer are Ethernet and Wi-Fi.</p>
+<p>We only need to know a few key features of this layer.</p>
 <h3 id="physical-layer">Physical Layer</h3>
-<p>It’s literally the “physical” layer, and as described in Data section of IT50, the physical link in this layer transport 0s and 1s from a source node to a destination node. Some common link media are copper wire, coaxial cable, and fiber-optic cable.</p>
-<p>We don't need go into details of this layer, either.</p>
+<p>It’s literally the “physical” layer. Data in this layer is just voltage pulses, light, and electromagnetic waves. Common link media include copper wire, optical fiber, and wireless signals.</p>
                 
               
               
