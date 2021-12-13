@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.0">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.816931ca.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.82f3c0b9.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.9204c3b2.min.css">
@@ -34,10 +34,9 @@
       
     
     
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../../..":"../../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -820,6 +819,26 @@
     Revisiting the SHAttered collision attack
   </a>
   
+    <nav class="md-nav" aria-label="Revisiting the SHAttered collision attack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-format-and-content-modification" class="md-nav__link">
+    File format and content modification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimenting-the-one-time-password-generator" class="md-nav__link">
+    Experimenting the one-time password generator
+  </a>
+  
 </li>
       
     </ul>
@@ -910,6 +929,26 @@
     Revisiting the SHAttered collision attack
   </a>
   
+    <nav class="md-nav" aria-label="Revisiting the SHAttered collision attack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-format-and-content-modification" class="md-nav__link">
+    File format and content modification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimenting-the-one-time-password-generator" class="md-nav__link">
+    Experimenting the one-time password generator
+  </a>
+  
 </li>
       
     </ul>
@@ -947,13 +986,24 @@ sha1sum shattered-2.pdf
 $ sha1sum shattered-2.pdf
 38762cf7f55934b34d179ae6a4c80cadccbb7f0a  shattered-2.pdf
 </code></pre></div>
-<p>Now, imagine that you trust the SHA-1 hash value <code>38762cf7f55934b34d179ae6a4c80cadccbb7f0a</code>. You then receive <code>shattered-2.pdf</code>, compute its SHA-1 hash, and subsequently trust <code>shattered-2.pdf</code>, assuming no one is able to construct a different piece of data that hashes to the same value. Were you the victim of a collision attack? We further verify that the content of the two files are different, using the SHA-2 256 hash algorithm:</p>
+<p>Now, imagine that you trust the SHA-1 hash value <code>38762cf7f55934b34d179ae6a4c80cadccbb7f0a</code>, because the author of the file gave you this hash. You then receive the <code>shattered-2.pdf</code> version, compute its SHA-1 hash, and subsequently trust <code>shattered-2.pdf</code>, assuming no one is able to construct a different piece of data that hashes to the same value. Were you the victim of a collision attack? We further verify that the two files are different, using the SHA-2 256 hash algorithm:</p>
 <div class="highlight"><pre><span></span><code>$ sha256sum shattered-1.pdf
 2bb787a73e37352f92383abe7e2902936d1059ad9f1ba6daaa9c1e58ee6970d0  shattered-1.pdf
 $ sha256sum shattered-2.pdf
 d4488775d29bdef7993367d541064dbdda50d383f89f0aa13a6ff2e0894ba5ff  shattered-2.pdf
 </code></pre></div>
-<p>That is the proof of a successful SHA-1 collision attack. Note that this was not obtained using plain brute force; an intelligent finding in the algorithm produced a method 100,000 times faster, according to the original researchers. This is why SHA-1 should be obsoleted.</p>
+<p>Or you can simply use <code>diff shattered-1.pdf shattered-2.pdf</code> to compare their data verbatim.</p>
+<p>That is the proof of a SHA-1 collision. Note that this was not obtained using plain brute force; an intelligent finding in the algorithm produced an algorithm 100,000 times faster, according to the original researchers. This is why SHA-1 should be obsoleted.</p>
+<h3 id="file-format-and-content-modification">File format and content modification</h3>
+<p>You can find that both <code>shattered-1.pdf</code> and <code>shattered-2.pdf</code> are valid PDF files, with modifications only at very intentional positions. This hints that such attacks can produce content as intended. In fact, this is the whole point of an attack.</p>
+<p>Many file formats specify unused positions. Data at these positions are ignored when opened by a supported program. However, data at these positions still contribute towards the hash. By changing these parts, an attacker can try to collide the hash after the intended modification is done.</p>
+<p>Hashes are short: SHA-1 is only 20 bytes long, and even SHA-2 512 is only 64 bytes long. If we assume that the SHA-2 512 mapping from input to output is “uniformly dense”, then we should expect to find one collision for all the possible 64-byte strings at an unused position. If there are 65 bytes of available space, then we should expect 256 collisions. This turns out to be very feasible since most file formats have way more than enough unused space for this modification. However, the irreversibility and chaosity still prevents an attack from being computed quickly.</p>
+<h2 id="experimenting-the-one-time-password-generator">Experimenting the one-time password generator</h2>
+<p>The popular one-time password (OTP) specification is based on cryptographic hashes. An OTP program generates a different code every fixed amount of time, and only this code is valid for this period of time. We are going to simulate an OTP system.</p>
+<p>First, the server determines a <strong>secret</strong> and displays it to the user. Let’s use the secret <code>He110!</code> (UTF-8 string) for our example.</p>
+<p>Then, assuming the client and the server both have synced their clocks, they calculate how many 30-second periods have passed since 12:00 AM, January 1, 1970 (GMT). Let’s use the value <code>54646121</code> for our example.</p>
+<p>Then, we combine these two pieces of data and hash it. If we simply concatenate these two strings into <code>He110!54646121</code> and use <code>sha256sum</code>, then we get the hash <code>c927ef15ac1d090bac6c3a9860242ddf2170b53aedaaac8f78c7e71cd3c6d11c</code>. We further reduce this to its first 3 bytes <code>c927ef</code> so it’s easy to type within 30 seconds. (This also makes brute force attacks almost impossible.)</p>
+<p>This hash will change after the 30-second period, but as long as the server and client still share the same secret and have their clocks synced, they will continue to generate the same hash. Even if an OTP such as <code>c927ef</code> is leaked, a person who doesn’t know the secret cannot continue to produce the same hash as the server. Therefore, it is important to protect OTP secrets, and this is why OTP utilities always hide them.</p>
 
               
             </article>
@@ -1004,10 +1054,10 @@ d4488775d29bdef7993367d541064dbdda50d383f89f0aa13a6ff2e0894ba5ff  shattered-2.pd
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigaion.instant", "navigation.tabs", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigaion.instant", "navigation.tabs", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.17f42bbf.min.js"></script>
       
     
   </body>
