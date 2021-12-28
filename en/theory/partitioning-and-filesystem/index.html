@@ -777,6 +777,8 @@
         
           
         
+          
+        
       
       
         
@@ -797,6 +799,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab/partitioning-and-filesystem.md" class="md-nav__link">
+        Partitioning and Filesystem
+      </a>
+    </li>
+  
+
             
           
             
@@ -922,6 +938,7 @@
                 
 
 <h1 id="partitioning-and-filesystem">Partitioning and Filesystem</h1>
+<p>Labs for <a href="../../lab/gnu-linux/partitioning-and-filesystem">GNU/Linux</a> · macOS · Windows</p>
 <p>Remember from where we introduced data, the space on your disk is just a singular series of 0’s and 1’s, and they can <em>only</em> be 0’s and 1’s. That is to say, the space allocation information is stored just in these 0’s and 1’s. Some parts of your disk store your files, and some parts store the space allocation information, all in the same, continuous, indifferent series of 0’s and 1’s of your disk. In this chapter, we set up levels of abstractions over this indifferent data to enable the familiar concepts we know.</p>
 <p>There are two types of allocation: <strong>partitioning</strong> and <strong>filesystem</strong>. Partitioning is quite rudimentary: it defines usable segments of your disk space. Then, typically, a filesystem is established in each partition to contain files, usually in a tree structure.</p>
 <p>On modern disks, data is accessed by logical blocks. <strong>Logical blocks address</strong>es (<strong>LBA</strong>) are linearally assigned, starting with 0. Most disks have a logical block size of 512 bytes.</p>

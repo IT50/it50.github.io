@@ -13,7 +13,7 @@
     
     
       
-        <title>Program - IT50</title>
+        <title>Partitioning and Filesystem - IT50</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#program" class="md-skip">
+        <a href="#partitioning-and-filesystem" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Program
+              Partitioning and Filesystem
             
           </span>
         </div>
@@ -205,15 +205,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../" class="md-tabs__link">
         Lab
       </a>
     </li>
@@ -661,14 +659,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -709,14 +705,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
       
       
@@ -771,80 +765,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Program
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
         Program
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-fast-is-ram" class="md-nav__link">
-    How fast is RAM?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compiling-a-simple-program" class="md-nav__link">
-    Compiling a simple program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-a-binary-program-looks-like" class="md-nav__link">
-    What a binary program looks like
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optimization" class="md-nav__link">
-    Optimization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interpreted-program" class="md-nav__link">
-    Interpreted program
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -932,37 +857,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-fast-is-ram" class="md-nav__link">
-    How fast is RAM?
+  <a href="#determining-the-name-of-your-disk" class="md-nav__link">
+    Determining the name of your disk
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#compiling-a-simple-program" class="md-nav__link">
-    Compiling a simple program
+  <a href="#listing-partitions" class="md-nav__link">
+    Listing partitions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-a-binary-program-looks-like" class="md-nav__link">
-    What a binary program looks like
+  <a href="#taking-a-look-at-the-raw-data-of-gpt" class="md-nav__link">
+    Taking a look at the raw data of GPT
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#optimization" class="md-nav__link">
-    Optimization
+  <a href="#partitions-made-accessible" class="md-nav__link">
+    Partitions made accessible
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpreted-program" class="md-nav__link">
-    Interpreted program
+  <a href="#filesystems-made-accessible" class="md-nav__link">
+    Filesystems made accessible
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-of-filesystems" class="md-nav__link">
+    Behavior of filesystems
+  </a>
+  
+    <nav class="md-nav" aria-label="Behavior of filesystems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    Deletion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwriting" class="md-nav__link">
+    Overwriting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -979,57 +931,172 @@
               
                 
 
-<h1 id="program">Program</h1>
-<h2 id="how-fast-is-ram">How fast is RAM?</h2>
-<p>There are plenty of system benchmark tools available. Use one of your choice to benchmark your hard drive and RAM, and compare their sequential and random read/write speeds.</p>
-<p>RAM should be extraordinarily faster than your hard drive when it comes to random operations. Random operations are very common in running programs, so RAM is chosen to be the storage for them.</p>
-<h2 id="compiling-a-simple-program">Compiling a simple program</h2>
-<p>Here is the source code of a very simple C program that adds the integers 3 and 5 together. It does not even give back the result in any way.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<h1 id="partitioning-and-filesystem">Partitioning and Filesystem</h1>
+<p><a href="../../../theory/partitioning-and-filesystem">Theory</a></p>
+<p>On your operating system, the raw data on your disks can be accessed by files in <code>/dev/</code> with appropriate previleges.</p>
+<p>This lab assumes that your disk is formatted with GPT.</p>
+<p>All examples in this lab are consistent as they came from the same disk.</p>
+<h2 id="determining-the-name-of-your-disk">Determining the name of your disk</h2>
+<p>To find out which file names are your disk, use <code>lsblk</code>.</p>
+<div class="highlight"><pre><span></span><code>$ lsblk
+NAME         MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1      259:0    0 476.9G  0 disk
+├─nvme0n1p1  259:1    0     2G  0 part  /boot/efi
+├─nvme0n1p2  259:2    0     6G  0 part  /boot
+└─...
 </code></pre></div>
-<p>Type the code into <code>add.c</code> and save the file.</p>
-<p>Then, use the following commands to let <code>gcc</code> compile the code into two executable binary versions. The first version has optimization disabled while the second version has optimization level set to 3. The outputs are saved to <code>add-O0</code> and <code>add-O3</code> respectively.</p>
-<div class="highlight"><pre><span></span><code>gcc -O0 add.c -o add-O0
-gcc -O3 add.c -o add-O3
+<p>In this example, the system has one single disk, accessible at <code>/dev/nvme0n1</code>. This disk has a few partitions, each accessible at <code>/dev/nvme0n1p1</code>, <code>/dev/nvme0n1p2</code>, <em>etc.</em></p>
+<p>Note that your system may have a different type of disk and use completely different names, like <code>sda</code> or <code>mmcblk0</code>. You need to use your own names consistently.</p>
+<h2 id="listing-partitions">Listing partitions</h2>
+<p>First, let’s use the <code>fdisk</code> tool to list the partitions on your disk.</p>
+<div class="highlight"><pre><span></span><code>sudo fdisk /dev/nvme0n1 -l
 </code></pre></div>
-<p>In case you wonder, <code>gcc</code> and its dependencies are in machine code. Because a computer can only understand its own machine language, anything that is not will ultimately be processed by some code in its own machine language.</p>
-<p>You can now run these two programs with <code>./add-O0</code> and <code>./add-O3</code>. It does not print anything to the terminal.</p>
-<h2 id="what-a-binary-program-looks-like">What a binary program looks like</h2>
-<p>On your operating system, binary executables are in ELF format.</p>
-<p>Use the following <code>objdump</code> command to disassemble the <code>add-O0</code> binary executable and save the output to <code>add-O0.dump.txt</code>.</p>
-<div class="highlight"><pre><span></span><code>objdump -D add-O0 &gt; add-O0.dump.txt
+<p>Here is an example output. Partitions starting from <code>/dev/nvme0n1p3</code> are omitted.</p>
+<div class="highlight"><pre><span></span><code>Disk /dev/nvme0n1: 476.94 GiB, 512110190592 bytes, 1000215216 sectors
+Disk model: ...
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: A80B1F45-EEA2-4649-826A-A65635984BC5
+
+Device             Start         End    Sectors    Size Type
+/dev/nvme0n1p1      2048     4196351    4194304      2G EFI System
+/dev/nvme0n1p2   4196352    16779263   12582912      6G Linux filesystem
+/dev/nvme0n1p3  16779264  1000215215  983435952  468.9G Linux filesystem
+...
 </code></pre></div>
-<p>Then, open the dump. Now locate the compiled <code>main</code> function, the x86-64 outcome of which is also provided below.</p>
-<div class="highlight"><pre><span></span><code>0000000000401106 &lt;main&gt;:
-  401106:       55                      push   %rbp
-  401107:       48 89 e5                mov    %rsp,%rbp
-  40110a:       c7 45 fc 00 00 00 00    movl   $0x3,-0x4(%rbp)
-  401111:       c7 45 f8 04 00 00 00    movl   $0x5,-0x8(%rbp)
-  401118:       8b 55 fc                mov    -0x4(%rbp),%edx
-  40111b:       8b 45 f8                mov    -0x8(%rbp),%eax
-  40111e:       01 d0                   add    %edx,%eax
-  401120:       89 45 f4                mov    %eax,-0xc(%rbp)
-  401123:       b8 00 00 00 00          mov    $0x0,%eax
-  401128:       5d                      pop    %rbp
-  401129:       c3                      ret
+<h2 id="taking-a-look-at-the-raw-data-of-gpt">Taking a look at the raw data of GPT</h2>
+<p>The following command reads the first 4 KiB of the disk <code>/dev/nvme0n1</code> and displays the data in hexadecimal form.</p>
+<div class="highlight"><pre><span></span><code>sudo head -c 4KiB /dev/nvme0n1 <span class="p">|</span> xxd
 </code></pre></div>
-<p>The first column is the linear byte address in the file. The hexadecimal data in the second column is the data at that address. The special thing about these data is that they are instructions directly executable by the x86-64 CPU. The last column shows what those hexadecimals stand for, in a more human-readable <strong>assembly language</strong> specific to the CPU architecture. Assembly code is only an alternative representation of the binary instructions; no transformation in the computing procedure is involved.</p>
-<p>You don’t have to understand this piece of code. However, try to look at how values are manipulated and moved around. We can see a single <code>add</code> instruction with two operands. That instruction indeed does the addition for us, although the result is unused. Note that no variable name is preserved in the compiled program.</p>
-<h2 id="optimization">Optimization</h2>
-<p>The compiler we used, GCC, has optimization functionalities. The second version we produced, <code>add-O3</code>, is the optimized version. After running <code>objdump -D add-O3 &gt; add-O3.dump.txt</code>, we have a look look at its <code>main</code> function:</p>
-<div class="highlight"><pre><span></span><code>0000000000401020 &lt;main&gt;:
-  401020:       31 c0                   xor    %eax,%eax
-  401022:       c3                      ret
+<p>Here is an example output. Data starting from <code>0x00000500</code> is omitted.</p>
+<div class="highlight"><pre><span></span><code>00000000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000040: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000050: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000060: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000070: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000080: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000090: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000100: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000110: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000120: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000130: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000140: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000150: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000160: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000170: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000180: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000190: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000001a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000001b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000001c0: 0200 eeff ffff 0100 0000 af12 9e3b 0000  .............;..
+000001d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000001e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000001f0: 0000 0000 0000 0000 0000 0000 0000 55aa  ..............U.
+00000200: 4546 4920 5041 5254 0000 0100 5c00 0000  EFI PART....\...
+00000210: ffd5 9941 0000 0000 0100 0000 0000 0000  ...A............
+00000220: af12 9e3b 0000 0000 0008 0000 0000 0000  ...;............
+00000230: 8e12 9e3b 0000 0000 451f 0ba8 a2ee 4946  ...;....E.....IF
+00000240: 826a a656 3598 4bc5 e007 0000 0000 0000  .j.V5.K.........
+00000250: 8000 0000 8000 0000 607d 64a3 0000 0000  ........`}d.....
+00000260: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000270: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000280: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000290: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000002a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000002b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000002c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000002d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000002e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000002f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000300: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000310: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000320: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000330: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000340: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000350: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000360: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000370: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000380: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000390: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000003a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000003b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000003c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000003d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000003e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000003f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000400: 2873 2ac1 1ff8 d211 ba4b 00a0 c93e c93b  (s*......K...&gt;.;
+00000410: 5ec1 c86e e48d 464f 9b69 5d02 4719 b5f2  ^..n..FO.i].G...
+00000420: 0008 0000 0000 0000 ff07 4000 0000 0000  ..........@.....
+00000430: 0000 0000 0000 0000 4500 4600 4900 2000  ........E.F.I. .
+00000440: 5300 7900 7300 7400 6500 6d00 2000 5000  S.y.s.t.e.m. .P.
+00000450: 6100 7200 7400 6900 7400 6900 6f00 6e00  a.r.t.i.t.i.o.n.
+00000460: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000470: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000480: af3d c60f 8384 7247 8e79 3d69 d847 7de4  .=....rG.y=i.G}.
+00000490: 6cfd 0ebb 729a 4ceb a35f 37b6 782e 6f3f  l...r.L.._7.x.o?
+000004a0: 0008 4000 0000 0000 ff07 0001 0000 0000  ..@.............
+000004b0: 0000 0000 0000 0000 4200 6f00 6f00 7400  ........B.o.o.t.
+000004c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000004d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000004e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000004f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+...
 </code></pre></div>
-<p>This version is much shorter than the unoptimized one. In fact, the only thing it does is returning 0. This is because GCC found that we left the result unused and further omitted the procedures to produce this result, so the program can run faster but still interact in the same way. This is only one of the many optimization techniques. Generally, optimizations make the code much faster to run, but much harder to read.</p>
-<h2 id="interpreted-program">Interpreted program</h2>
-<p>Python is an easy-to-learn interpreted programming language. Because it is interpreted, it has an interactive shell that lets you type in one line of code at a time and run it as appropriate. Start <code>python3</code>, then issue <code>a = 3</code>, <code>b = 5</code>, <code>s = a + b</code>, and <code>print(s)</code>. This will not save anything to a file. Use <code>exit()</code> to exit.</p>
-<p>Again, these lines are ultimately processed by some machine code, in this case <code>python3</code> and its dependencies.</p>
+<p>We are looking at the GPT on this disk. If you have the GPT specification at hand, you can actually interpret this output. Here is a brief description.</p>
+<ul>
+<li>
+<p><em>The GPT header (<code>0x00000000</code> to <code>0x000003ff</code> (LBAs 0, 1)).</em> This part contains information to identify the GPT structure on this disk, including a protective MBR (<code>0x00000000</code> to <code>0x000001ff</code>) for backward compatibility. The disk information from the previous <code>fdisk</code> output is a human-readable representation of this part.</p>
+</li>
+<li>
+<p><em>GPT partition entries (<code>0x00000400</code> (LBA 2) onward).</em> Each entry takes exactly <code>0x80</code> bytes containing a partition type GUID, a partition GUID, start and end LBA, attribute flags, and partition name. The partition list from the previous <code>fdisk</code> output is a human-readable representation of these entries.</p>
+</li>
+</ul>
+<p>If you look closer, you will find a clear structure in this data. You may further realize that when storing data in binary, it just makes (engineering) sense to align structures, because one can only read or overwrite on binary data. This is what we mean by “binary data has a fixed size and does not become longer or shorter” in the Binary Data chapter.</p>
+<h2 id="partitions-made-accessible">Partitions made accessible</h2>
+<p>Your operating system makes the partitions specified in the GPT appear as separate pieces of data, namely the <code>part</code>s you previously obtained with <code>lsblk</code>.</p>
+<p>Using the same command as above, but with the OS-provided file <code>/dev/nvme0n1p1</code>, you can display the first 1 KiB of a partition. Alternatively, you can still use the raw disk <code>/dev/nvme0n1</code> and manually skip to the partition. Both will display the same part of the disk. In this example, the byte we should skip to is given by (512 bytes/LBA) × (2048 LBAs) = 1048576 bytes = 1 MiB.</p>
+<div class="highlight"><pre><span></span><code>sudo head -c <span class="m">1024</span> /dev/nvme0n1p1 <span class="p">|</span> xxd
+sudo tail -c +1048576 /dev/nvme0n1 <span class="p">|</span> head -c <span class="m">1024</span> <span class="p">|</span> xxd
+</code></pre></div>
+<h2 id="filesystems-made-accessible">Filesystems made accessible</h2>
+<p>Normally, there is one filesystem established in each partition. Mounting is one layer of abstraction that makes a piece of raw filesystem data available as its logical content. The <code>mount</code> program manages what filesystems are made available by the operating system. To list currently available filesystems, use a single <code>mount</code>.</p>
+<div class="highlight"><pre><span></span><code>$ mount
+/dev/nvme0n1p3 on / type btrfs (rw,relatime,seclabel,compress=zstd:1,ssd,space_cache,subvolid=257,subvol=/root)
+/dev/nvme0n1p2 on /boot type ext4 (rw,relatime,seclabel)
+/dev/nvme0n1p1 on /boot/efi type vfat (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro)
+...
+</code></pre></div>
+<h2 id="behavior-of-filesystems">Behavior of filesystems</h2>
+<h3 id="deletion">Deletion</h3>
+<p>As previously noted, filesystems delete files by marking the corresponding space as unused. Then, it is only a matter of time and chance whether or not that space will be overwritten by new data. Try creating a new file with some unique content, deleting it, and searching the raw filesystem data for that content.</p>
+<p>First, you need determine which filesystem you want to test. This example uses <code>/dev/nvme0n1p3</code>, which is mounted at <code>/</code>. Then,  a file <code>flag</code> is created somewhere inside that filesystem (<code>~</code> is inside <code>/</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~
+<span class="nv">FLAG</span><span class="o">=</span><span class="s2">&quot;ja98n65c7n5t38zr&quot;</span>
+<span class="nb">echo</span> <span class="nv">$FLAG</span> &gt; flag
+rm flag
+sudo grep <span class="nv">$FLAG</span> /dev/nvme0n1p3
+</code></pre></div>
+<p>Note: Do not exit the shell during this experiment, or your shell may write the command history to disk.</p>
+<h3 id="overwriting">Overwriting</h3>
+<p>Filesystems have different overwriting behavior. Some will overwrite at the original position, while others use a random position. To test this, we use <code>shred</code>. It simply does a file overwrite in a mounted filesystem, so the raw operation is still determined by the filesystem.</p>
+<p>Use the following procedure to test. You need to test multiple times to get a reliable result.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~
+<span class="nv">FLAG</span><span class="o">=</span><span class="s2">&quot;sm0f8hc862f8ywvb&quot;</span>
+<span class="nb">echo</span> <span class="nv">$FLAG</span> &gt; flag
+shred flag
+sudo grep <span class="nv">$FLAG</span> /dev/nvme0n1p3
+</code></pre></div>
 
               
             </article>
@@ -1039,41 +1106,6 @@ gcc -O3 add.c -o add-O3
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab for GNU/Linux" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Lab for GNU/Linux
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../cryptographic-hash/" class="md-footer__link md-footer__link--next" aria-label="Next: Cryptographic Hash" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Cryptographic Hash
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
