@@ -1048,12 +1048,12 @@ nvme0n1      259:0    0 476.9G  0 disk
 └─...
 </code></pre></div>
 <p>In this example, the system has one single disk, accessible at <code>/dev/nvme0n1</code>. This disk has a few partitions, each accessible at <code>/dev/nvme0n1p1</code>, <code>/dev/nvme0n1p2</code>, <em>etc.</em></p>
-<p>Note that your system may have a different type of disk and use completely different names, like <code>sda</code> or <code>mmcblk0</code>. You need to use your own names consistently.</p>
+<p>Your system may have a different type of disk and use completely different names, like <code>sda</code> or <code>mmcblk0</code>. You need to use your own names consistently.</p>
 <h2 id="listing-partitions">Listing partitions</h2>
 <p>First, let’s use the <code>fdisk</code> tool to list the partitions on your disk.</p>
 <div class="highlight"><pre><span></span><code>sudo fdisk /dev/nvme0n1 -l
 </code></pre></div>
-<p>Here is an example output. Partitions starting from <code>/dev/nvme0n1p3</code> are omitted.</p>
+<p>Here is an example output. Partitions starting from <code>/dev/nvme0n1p4</code> are omitted.</p>
 <div class="highlight"><pre><span></span><code>Disk /dev/nvme0n1: 476.94 GiB, 512110190592 bytes, 1000215216 sectors
 Disk model: ...
 Units: sectors of 1 * 512 = 512 bytes
@@ -1181,8 +1181,8 @@ sudo tail -c +1048576 /dev/nvme0n1 <span class="p">|</span> head -c <span class=
 </code></pre></div>
 <h2 id="behavior-of-filesystems">Behavior of filesystems</h2>
 <h3 id="deletion">Deletion</h3>
-<p>As previously noted, filesystems delete files by marking the corresponding space as unused. Then, it is only a matter of time and chance whether or not that space will be overwritten by new data. Try creating a new file with some unique content, deleting it, and searching the raw filesystem data for that content.</p>
-<p>First, you need determine which filesystem you want to test. This example uses <code>/dev/nvme0n1p3</code>, which is mounted at <code>/</code>. Then,  a file <code>flag</code> is created somewhere inside that filesystem (<code>~</code> is inside <code>/</code>).</p>
+<p>As previously noted, filesystems delete files by marking the corresponding space as unused. Then, it is only a matter of time and chance whether or not that space will be overwritten by new or growing files.</p>
+<p>Try creating a new file with some unique content, deleting it, and searching the raw filesystem data for that content. First, you need determine which filesystem you want to test. This example uses <code>/dev/nvme0n1p3</code>, which is mounted at <code>/</code>. Then,  a file <code>flag</code> is created somewhere inside that filesystem (<code>~</code> is inside <code>/</code>).</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~
 <span class="nv">FLAG</span><span class="o">=</span><span class="s2">&quot;ja98n65c7n5t38zr&quot;</span>
 <span class="nb">echo</span> <span class="nv">$FLAG</span> &gt; flag
