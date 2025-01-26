@@ -500,15 +500,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#amount-of-binary-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amount of binary data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#addressing" class="md-nav__link">
     <span class="md-ellipsis">
       Addressing
@@ -521,6 +512,15 @@
   <a href="#binary-data-operations" class="md-nav__link">
     <span class="md-ellipsis">
       Binary data operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amount-of-binary-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amount of binary data
     </span>
   </a>
   
@@ -1203,15 +1203,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#amount-of-binary-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amount of binary data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#addressing" class="md-nav__link">
     <span class="md-ellipsis">
       Addressing
@@ -1224,6 +1215,15 @@
   <a href="#binary-data-operations" class="md-nav__link">
     <span class="md-ellipsis">
       Binary data operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amount-of-binary-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amount of binary data
     </span>
   </a>
   
@@ -1271,10 +1271,6 @@
 <div class="highlight"><pre><span></span><code>00000110 00001000 00001011 01000100 11100010 10101010 10101011 01001
 </code></pre></div>
 <p>You will also read data in bytes rather than in bits. A byte is commonly written as a two-digit hexadecimal number that can be directly converted from its binary representation. For example, <code>0b11100100</code> will be represented as <code>0xE4</code>, where in a certain convention <code>0b</code> stands for binary and <code>0x</code> stands for hexadecimal.</p>
-<h2 id="amount-of-binary-data">Amount of binary data</h2>
-<p>When discussing the amount of binary data, we can say there is a certain number of bits or bytes. The example data above is 8 bytes, or 64 bits.</p>
-<p>The symbol for bit is a lowercase <strong>b</strong>. For extra clarity, you can also use <strong>bit</strong>.</p>
-<p>The symbol for byte is an uppercase <strong>B</strong> or lowercase <strong>o</strong> (“octet”, a group of eight things).</p>
 <h2 id="addressing">Addressing</h2>
 <p>An <strong>address</strong> is a number used to locate a byte or block in raw data.</p>
 <p><strong>Linear addressing</strong> is a very simple way to addresses a piece of data. The starting position has address 0, and the address increases by 1 for every subsequent byte (or fixed-size <strong>block</strong> of bytes, which we will use in a later chapter.)</p>
@@ -1370,6 +1366,10 @@
 <p>At a low level, binary data has a fixed size and does not become longer or shorter. This way of treating binary data is natural to computer engineers. On binary data, to write means to overwrite, changing a part to the desired content and destroying existing data.</p>
 <p>If a piece of binary data can become longer or shorter, this usually means it is a file in a <a href="../partitioning-and-filesystem/">filesystem</a>, a higher level of abstraction which we have not discussed yet.</p>
 <p>When the original data is not important, a piece of binary data may be referred to as space. Without any abstraction performed by the operating system, the disk in your computer appears as a long sequence of bytes.</p>
+<h2 id="amount-of-binary-data">Amount of binary data</h2>
+<p>When discussing the amount of binary data, we can say there is a certain number of bits or bytes. The example data above is 8 bytes, or 64 bits.</p>
+<p>The symbol for bit is simply <strong>bit</strong>, but a lowercase <strong>b</strong> is also often used.</p>
+<p>The symbol for byte is an uppercase <strong>B</strong> or lowercase <strong>o</strong> (“octet”, a group of eight things).</p>
 <h2 id="units">Units</h2>
 <p>The base units for the amount of data are byte and bit. We use <strong>prefixes</strong> on them to specify a <strong>magnitude</strong>. As per <strong>IEC 80000-13</strong> and <strong>SI</strong>:</p>
 <table>
